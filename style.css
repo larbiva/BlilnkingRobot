@@ -1,0 +1,147 @@
+body {
+    background-image: linear-gradient(to right, white, gray, gray, white);
+  }
+  
+  h1 {
+      text-align: center;
+      font-family: 'Roboto', sans-serif;
+    text-shadow: 2px 2px 5px #ffffff;
+  }
+  
+  .robots {
+    display: flex;
+    justify-content: center;
+   }
+  
+  .head, 
+  .left_arm, 
+  .torso, 
+  .right_arm, 
+  .left_leg, 
+  .right_leg { 
+    background-image: radial-gradient(circle, white, #5f93e8, black);
+  }
+  
+  .head { 
+      width: 200px; 
+      margin: 0 auto; 
+      height: 150px; 
+      border-radius: 200px 200px 0 0; 
+      margin-bottom: 10px;
+    transition: 1s ease-in-out;
+  } 
+  
+  .head:hover {
+      width: 300px;
+  }
+  
+  .upper_body { 
+      width: 300px; 
+      height: 150px;
+      display: flex; 
+  } 
+  
+  .left_arm, .right_arm { 
+      width: 40px; 
+      height: 125px;
+      border-radius: 100px;
+    
+  } 
+  .left_arm { 
+      margin-right: 10px;
+    position: relative;
+    top: 0;
+    transition: top ease 0.5s;
+  } 
+  .left_arm:hover {
+    top: -30px;
+  }
+  
+  .right_arm { 
+      margin-left: 10px;
+    position: relative;
+    top: 0;
+    transition: top ease 0.5s;
+  } 
+  .right_arm:hover { 
+    top: -30px;
+  }
+  
+  .torso { 
+      width: 200px; 
+      height: 200px;
+      border-radius: 0 0 50px 50px; 
+    z-index: 1;
+    position: relative;
+  } 
+  
+  .lower_body { 
+      width: 200px; 
+      height: 200px;
+      /* This is another useful property. Hmm what do you think it does?*/
+      margin: 0 auto;
+    display: flex;
+  } 
+  
+  .left_leg, .right_leg { 
+      width: 50px;
+      height: 120px;
+      border-radius: 100px; 
+  } 
+  .left_leg { 
+      margin-left: 35px;
+    transition: transform ease 0.5s;
+  } 
+  .left_leg:hover {
+      -webkit-transform: rotate(30deg);
+      -moz-transform: rotate(30deg);
+      -o-transform: rotate(30deg);
+      -ms-transform: rotate(30deg);
+      transform: rotate(30deg);
+  }
+  .right_leg { 
+      margin-left: 30px;
+    transition: transform ease 0.5s;
+  }
+  .right_leg:hover {
+      -webkit-transform: rotate(-30deg);
+      -moz-transform: rotate(-30deg);
+      -o-transform: rotate(-30deg);
+      -ms-transform: rotate(-30deg);
+      transform: rotate(-30deg);  
+  }
+  
+  .left_eye, .right_eye { 
+      width: 20px; 
+      height: 20px; 
+      border-radius: 15px; 
+      background-image: radial-gradient(circle, black, gray);
+    -webkit-transform-origin: 50%;
+    -webkit-animation: blink 3s infinite;
+  } 
+  @-webkit-keyframes blink {
+      0%, 100% {
+          transform: scale(1, .05);
+      }
+      5%,
+      95% {
+          transform: scale(1, 1);
+      }
+  }
+  
+  .left_eye { 
+      /* These properties are new and you haven't encountered
+      in this course. Check out CSS Tricks to see what it does! */
+      position: relative; 
+      top: 100px; 
+      left: 40px; 
+  } 
+  
+  .right_eye { 
+      position: relative; 
+      top: 100px; 
+      left: 120px; 
+  }
+   
+  
+  
